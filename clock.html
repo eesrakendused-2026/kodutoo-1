@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="clock.js" defer></script>
     <link rel="stylesheet" href="clock.css">
     <title>Kell</title>
+    <audio id="music" controls>
+        <source src="./public/music.mp3" type="audio/ogg">
+    </audio>
 </head>
 
 <body>
+
     <!-- HTML struktureerimiseks: Ctrl+A Ctrl+K Ctrl+F -->
     <div id="container">
         <div id="clockContainer">
@@ -25,6 +30,24 @@
             <button id="bigger">+</button>
             <button id="smaller">-</button>
         </div>
+        <div id="controlPanel">
+            <div id="musicContainer">
+                <label>Music:</label>
+                <button id="musicBtn">🎵</button>
+            </div>
+            <div id="formatContainer">
+                <label>Format:</label>
+                <button id="formatUs" onclick="changeFormat('us')">US</button>
+                <button id="formatEu" onclick="changeFormat('eu')">EU</button>
+            </div>
+            <div id="backgroundContainer">
+                <label>Background:</label>
+                <button onclick="changeWallpaper('wallpaper1.jpg')">🖼️</button>
+                <button onclick="changeWallpaper('wallpaper2.png')">🖼️</button>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
+
 </html>
