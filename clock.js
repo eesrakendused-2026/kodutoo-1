@@ -3,6 +3,9 @@ const PIXABAY_API_KEY = '55039479-2501ec1bb912cdbce7b203876';
 const pi = 3.14;
 let hours, minutes, seconds, day, month, year, dateTime;
 let fontSize = 25;
+let clockPosX = 0;
+let clockPosY = 0;
+const moveStep = 10;
 
 function upDateClock() {
 
@@ -53,7 +56,7 @@ function updateDate() {
 }
 
 function toggleSettings() {
-    console.log("nupp töötab");
+    //console.log("nupp töötab");
     const settings = document.getElementById('settings');
     if (settings.style.display === 'none' || settings.style.display === '') {
         settings.style.display = 'block';
@@ -88,6 +91,7 @@ function saveSettings() {
         if (newFontColor) {
             document.getElementById('clockContainer').style.color = newFontColor;
             document.getElementById('dateContainer').style.color = newFontColor;
+            document.getElementById('weekday').style.color = newFontColor;
         }
     }
 
@@ -102,8 +106,8 @@ function saveSettings() {
             hours = hours % 12;
             hours = hours ? hours : 12;
             document.getElementById('hours').innerHTML = hours + ":";
-            document.getElementById('minutes').innerHTML = minutes < 10 ? '0' + minutes : minutes + ":";
-            document.getElementById('seconds').innerHTML = seconds < 10 ? '0' + seconds : seconds;
+            document.getElementById('minutes').innerHTML = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById('seconds').innerHTML = seconds < 10 ? '0' + seconds : ":" + seconds;
             document.getElementById('ampm').innerHTML = ampm;
         }
     }
@@ -150,7 +154,7 @@ function saveSettings() {
     }
 
 
-
+    toggleSettings();
     fontSizeChange();
     fontFamilyChange();
     fontColorChange();
@@ -170,8 +174,17 @@ function resetSettings() {
     document.getElementById('clockContainer').style.color = '';
     document.getElementById('dateContainer').style.color = '';
     document.querySelector('main').style.backgroundImage = '';
+    document.getElementById('format').value = '24';
+    document.getElementById('showSeconds').checked = true;
+    document.getElementById('seconds').style.display = 'inline';
+    document.getElementById('dateDayContainer').style.fontSize = '';
+    document.getElementById('weekday').style.color = '';
+    document.getElementById('ampm').innerHTML = '';
     document.getElementById('bgVideo').style.display = 'block';
     document.getElementById('bgVideo').play();
+    document.getElementById('container').style.transform = 'translate(0px, 0px)';
+    clockPosX = 0;
+    clockPosY = 0;
 }
 
 function fullScreen() {
@@ -191,6 +204,7 @@ function loadRandomBackground() {
         .then(response => response.json())
         .then(data => {
             const videos = data.hits;
+            console.log(videos);
             if (!videos.length) return;
 
             const randomVideo = videos[Math.floor(Math.random() * videos.length)];
@@ -209,6 +223,26 @@ function getDayOfWeek() {
     document.getElementById('weekday').innerHTML = daysOfWeek[currentDay];
 }
 
+function moveClock(event) {
+    const container = document.getElementById('container');
+
+    if (event.key === 'ArrowUp') {
+        clockPosY -= moveStep;
+    } else if (event.key === 'ArrowDown') {
+        clockPosY += moveStep;
+    } else if (event.key === 'ArrowLeft') {
+        clockPosX -= moveStep;
+    } else if (event.key === 'ArrowRight') {
+        clockPosX += moveStep;
+    } else {
+        return;
+    }
+
+    event.preventDefault();
+    container.style.transform = `translate(${clockPosX}px, ${clockPosY}px)`;
+}
+
+document.getElementById('settings').style.display = 'none';
 loadRandomBackground();
 upDateClock();
 updateDate();
@@ -220,3 +254,4 @@ document.getElementById('toggleSettings').addEventListener('click', toggleSettin
 document.getElementById('saveSettings').addEventListener('click', saveSettings);
 document.getElementById('resetSettings').addEventListener('click', resetSettings);
 document.getElementById('fullscreen').addEventListener('click', fullScreen);
+document.addEventListener('keydown', moveClock);
