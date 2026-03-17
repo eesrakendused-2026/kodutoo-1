@@ -25,12 +25,13 @@
             <div id="day">01.</div>
             <div id="month">01.</div>
             <div id="year">2000</div>
-        </div>
-        <div id="buttonContainer">
-            <button id="bigger">+</button>
-            <button id="smaller">-</button>
-        </div>
+        </div><br>
+        <button id="hide">Hide</button>
         <div id="controlPanel">
+            <div id="buttonContainer">
+                <button id="bigger">+</button>
+                <button id="smaller">-</button>
+            </div>
             <div id="musicContainer">
                 <label>Music:</label>
                 <button id="musicBtn">🎵</button>
@@ -45,9 +46,13 @@
                 <button onclick="changeWallpaper('wallpaper1.jpg')">🖼️</button>
                 <button onclick="changeWallpaper('wallpaper2.png')">🖼️</button>
             </div>
+            <button id="vidoBtn">Entertainment</button>
         </div>
     </div>
-    </div>
+    <video id="video" width="640" height="480" autoplay muted>
+        <source src="../public/video.mp4" type="video/mp4">
+    </video>
+    <footer>Roland Piperal</footer>
 </body>
 
 </html>

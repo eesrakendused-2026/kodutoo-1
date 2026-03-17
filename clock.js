@@ -1,4 +1,3 @@
-console.log("fail ühendatud");
 const pi = Math.PI;
 let hours, minutes, seconds, day, month, year, dateTime;
 let fontSize = 25;
@@ -6,21 +5,17 @@ let fontSize = 25;
 const music = document.getElementById("music")
 const musicBtn = document.getElementById("musicBtn")
 let isPlaying = false
+let isShowing = false
+let isShowingPanel = true
 let format = "eu"
 let container = document.getElementById("container")
+let clockContainer = document.getElementById("clockContainer")
+const videoBtn = document.getElementById("vidoBtn")
+const video = document.getElementById("video")
+const hideBtn = document.getElementById("hide")
+const controlPanel = document.getElementById("controlPanel")
 
-
-musicBtn.addEventListener("click", () => {
-    if (!isPlaying) {
-        music.play()
-        isPlaying = true
-    }
-    else {
-        music.pause()
-        isPlaying = false
-    }
-})
-
+//Kõik funtsioonid on siin
 function changeFontSizeBigger() {
     fontSize = fontSize + 5;
     if (fontSize > 200) {
@@ -88,13 +83,9 @@ function upDateClock() {
 
 }
 
-
 function changeFormat(newFormat) {
     format = newFormat
 }
-
-
-
 
 function updateDate() {
 
@@ -169,9 +160,17 @@ function changeWallpaper(path) {
     body[0].style.backgroundImage = `url(../public/${path})`
 }
 
+//Värvi generattori võtsin siit:https://www.educative.io/answers/how-to-generate-a-random-color-in-javascript
+function generateRandomColor() {
+    let maxVal = 0xFFFFFF; // 16777215
+    let randomNumber = Math.random() * maxVal;
+    randomNumber = Math.floor(randomNumber);
+    randomNumber = randomNumber.toString(16);
+    let randColor = randomNumber.padStart(6, 0);
+    return `#${randColor.toUpperCase()}`
+}
 
-
-
+//Kella funktsioonide tööle panemine    
 upDateClock();
 updateDate();
 setInterval(upDateClock, 1000);
@@ -179,3 +178,45 @@ setInterval(updateDate, 1000);
 document.getElementById('bigger').addEventListener('click', changeFontSizeBigger);
 document.getElementById('smaller').addEventListener('click', changeFontSizeSmaller);
 window.addEventListener('keypress', checkKey);
+
+//video mängija controller
+videoBtn.addEventListener("click", () => {
+    if (!isShowing) {
+        video.style.top = "50%"
+        isShowing = true
+    }
+    else {
+        video.style.top = "100%"
+        isShowing = false
+    }
+})
+
+//kella taustavärvi muutuja funktsioon
+clockContainer.addEventListener("click", () => {
+    clockContainer.style.backgroundColor = generateRandomColor()
+    console.log(generateRandomColor())
+})
+
+//control paneli peitmise nupp
+hideBtn.addEventListener("click", () => {
+    if (!isShowingPanel) {
+        controlPanel.style.display = "block"
+        isShowingPanel = true
+    }
+    else {
+        controlPanel.style.display = "none"
+        isShowingPanel = false
+    }
+})
+
+//Muusika mängija controller
+musicBtn.addEventListener("click", () => {
+    if (!isPlaying) {
+        music.play()
+        isPlaying = true
+    }
+    else {
+        music.pause()
+        isPlaying = false
+    }
+})

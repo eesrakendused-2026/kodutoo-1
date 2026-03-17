@@ -5,6 +5,15 @@ body {
     font-size: 30px;
     color: white;
     font-family: Arial, Helvetica, sans-serifs;
+    overflow: hidden;
+    text-shadow: 2px 3px 5px black;
+}
+
+#video {
+    position: absolute;
+    top: 200%;
+    left: 65%;
+    transition: 2s ease;
 }
 
 #container {
@@ -23,7 +32,7 @@ body {
     box-shadow: -20px 20px 40px black;
 }
 
-#buttonContainer{
+#buttonContainer {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -47,7 +56,6 @@ button {
     width: 40px;
 }
 
-
 audio {
     display: none;
 }
@@ -63,5 +71,23 @@ button:hover {
     justify-content: center;
     font-size: 25px;
     padding: 10px;
-    
+
+}
+
+#vidoBtn {
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 0px;
+    height: 40px;
+    width: 100%;
+}
+
+#hide {
+    width: 100%;
+}
+
+footer{
+    position: fixed;
+    font-size: 20px;
+    bottom: 0%;
 }
