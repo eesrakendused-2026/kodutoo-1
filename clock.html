@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="clock.js" defer></script>
     <link rel="stylesheet" href="clock.css">
     <title>Kell</title>
+    <audio id="music" controls>
+        <source src="./public/music.mp3" type="audio/ogg">
+    </audio>
 </head>
 
 <body>
+
     <!-- HTML struktureerimiseks: Ctrl+A Ctrl+K Ctrl+F -->
     <div id="container">
         <div id="clockContainer">
@@ -20,11 +25,34 @@
             <div id="day">01.</div>
             <div id="month">01.</div>
             <div id="year">2000</div>
-        </div>
-        <div id="buttonContainer">
-            <button id="bigger">+</button>
-            <button id="smaller">-</button>
+        </div><br>
+        <button id="hide">Hide</button>
+        <div id="controlPanel">
+            <div id="buttonContainer">
+                <button id="bigger">+</button>
+                <button id="smaller">-</button>
+            </div>
+            <div id="musicContainer">
+                <label>Music:</label>
+                <button id="musicBtn">🎵</button>
+            </div>
+            <div id="formatContainer">
+                <label>Format:</label>
+                <button id="formatUs" onclick="changeFormat('us')">US</button>
+                <button id="formatEu" onclick="changeFormat('eu')">EU</button>
+            </div>
+            <div id="backgroundContainer">
+                <label>Background:</label>
+                <button onclick="changeWallpaper('wallpaper1.jpg')">🖼️</button>
+                <button onclick="changeWallpaper('wallpaper2.png')">🖼️</button>
+            </div>
+            <button id="vidoBtn">Entertainment</button>
         </div>
     </div>
+    <video id="video" width="640" height="480" autoplay muted>
+        <source src="../public/video.mp4" type="video/mp4">
+    </video>
+    <footer>Roland Piperal</footer>
 </body>
+
 </html>
