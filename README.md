@@ -1,5 +1,15 @@
 https://w1ttyrat.github.io/kodutoo-1/
 
+Tanel Metshein
+
+See projekt on interaktiivne digikell veebirakendus, mis kuvab reaalajas kellaaega, kuupäeva ja nädalapäeva. Kell uuendab aega automaatselt iga poole sekundi järel ning kuupäeva iga minuti järel. Kasutaja saab valida 24h või 12h ajavormingu, kus 12h vaates kuvatakse ka AM/PM tähis, ning soovi korral sekundite kuvamise sisse või välja lülitada.
+
+Rakenduses on seadete paneel, mille kaudu saab muuta kella välimust: fondi suurust, fondi perekonda, teksti värvi, kuupäeva suurust ja nädalapäeva ploki suurust. Taustaks saab kasutada nii kasutaja enda üles laaditud pilti kui ka automaatselt laaditavat juhuslikku videot Pixabay API kaudu. Lisaks on olemas täisekraanirežiim ning kella asukoha liigutamine klaviatuuri nooleklahvidega. Kõik seaded saab ühe nupuga algväärtustele taastada.
+
+AI-d sai kasutatud, et lisada juurde stiili ning osade funktsioonide juures
+
+![ekraanipilt](image.png)
+
 # kodutoo-1
 
 ## Tähtaeg 01.04.2026 23:59
