@@ -1,3 +1,10 @@
+html{
+    margin:0;
+    padding:0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
 body{
     margin:0;
     padding:0;
@@ -12,12 +19,17 @@ body{
     height: 90vh;
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin:0;
+    padding:0;
 }
 
 #clockContainer, #dateContainer{
     display: flex;
     justify-content: center;
-    font-size: 25px;
+    font-size: 100px;
 }
 
 button{
@@ -26,4 +38,45 @@ button{
     padding: 0px;
     height: 40px;
     width: 40px;
+}
+
+button.link{
+    background: none;
+    border: none;
+}
+
+/* https://www.w3schools.com/howto/howto_css_disable_text_selection.asp */
+.prevent-select{
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.selection {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 10;
+    opacity: 0;
+}
+
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.selection:nth-of-type(2) {
+    top: 40px;
+}
+
+.selection:nth-of-type(3) {
+    top: 70px;
+}
+
+.selection:hover {
+    opacity: 1;
 }
