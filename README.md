@@ -14,4 +14,4 @@
 
 ## Ekraanipilt rakendusest
 
-![alt text](image.png)
+<img width="2940" height="1828" alt="image" src="https://github.com/user-attachments/assets/96aeb429-58e1-475d-802d-7f9aca1a8d8c" />
