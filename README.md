@@ -1,3 +1,14 @@
+### Autor: Risto Leitalu
+
+1. Vajutades "+" suurendab fondi suurust. Toimib ka "+" klahvi vajutades.
+1. Vajutades "-" vähendab fondi suurust. Toimib ka "-" klahvi vajutades.
+1. Vajutades klaviatuuril tühikuklahvi (Spacebar) või "Vaheta Fonti" nuppu muutub teksti font.
+1. Vajutades "Teksti värv:" kõrvalolevale värvilisele ristkülikule saab valida teksti värvi kasutades värvivalijat (color picker). 
+1. Vajutades "Tausta värv:" kõrvalolevale värvilisele ristkülikule saab valida taustavärvi kasutades värvivalijat (color picker). 
+1. Vajutades "24h" nupule saab valida kas 12h formaati või 24h formaati
+## ekraanipilt rakendusest:
+<img width="1300" height="892" alt="image" src="https://github.com/user-attachments/assets/791f35ee-a122-4284-965a-4baddefc0aac" />
+
 # kodutoo-1
 
 ## Tähtaeg 01.04.2026 23:59
