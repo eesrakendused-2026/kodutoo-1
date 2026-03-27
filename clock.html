@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="clock.js" defer></script>
     <link rel="stylesheet" href="clock.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Kell</title>
 </head>
 
 <body>
-    <!-- HTML struktureerimiseks: Ctrl+A Ctrl+K Ctrl+F -->
     <div id="container">
+        <div id="info">
+            <p>Autor: Risto Leitalu</p>
+            <a href="https://github.com/Risto-Leitalu/kodutoo-1/" target="_blank">Projekt GitHubis</a>
+        </div>
         <div id="clockContainer">
             <div id="hours">00:</div>
             <div id="minutes">00:</div>
@@ -20,10 +24,19 @@
             <div id="day">01.</div>
             <div id="month">01.</div>
             <div id="year">2000</div>
+            <div id="weekday">Esmaspäev</div>
         </div>
-        <div id="buttonContainer">
+        
+        <div id="controlsContainer">
             <button id="bigger">+</button>
             <button id="smaller">-</button>
+            <button id="changeFont">Vaheta Fonti</button>
+            <label>Teksti värv: <input type="color" id="textColor" value="#ffffff"></label>
+            <label>Tausta värv: <input type="color" id="bgColor" value="#000000"></label>
+            <select id="format">
+                <option value="24">24h</option>
+                <option value="12">12h</option>
+            </select>
         </div>
     </div>
 </body>
