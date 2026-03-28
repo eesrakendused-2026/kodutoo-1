@@ -41,7 +41,7 @@ function updateClock() {
         hours = hours % 12;
         hours = hours ? hours : 12;
 
-        document.getElementById('seconds').innerHTML = seconds < 10 ? "0" + seconds : seconds + " " + ampm;
+        document.getElementById('seconds').innerHTML = seconds < 10 ? "0" + seconds + " " + ampm : seconds + " " + ampm;
         document.getElementById('minutes').innerHTML = (minutes < 10 ? "0" + minutes : minutes) + ":";
         document.getElementById('hours').innerHTML = (hours < 10 ? "0" + hours : hours) + ":";
     } else {
