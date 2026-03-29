@@ -10,3 +10,4 @@ Argo Luur
 1. Pluss/miinus: muudab fondi suurust (töötab ka klaviatuur + ja -)
 1. Nooled: liigutab teksti paremale, vasakule, keskele
 1. Vikerkaare kell: muudab kella teksti värviliseks
+1. "Space" klaviatuuril: peatab kella liikumise (toggle)
