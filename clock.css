@@ -1,29 +1,82 @@
-body{
-    margin:0;
-    padding:0;
-    background-color: black;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
     font-size: 30px;
-    color:white;
+    color: white;
+    font-family: sans-serif;
 }
 
-#container{
+#container {
     display: flex;
-    flex-direction: column;
-    height: 90vh;
+    flex-direction: column-reverse;
+    height: 50vh;
     align-items: center;
     justify-content: center;
 }
 
-#clockContainer, #dateContainer{
+#clockContainer,
+#dateContainer {
     display: flex;
+
     justify-content: center;
-    font-size: 25px;
+    font-size: 100px;
+    font-weight: bold;
+    animation-name: none;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-button{
-    font-size: 1.1em;
-    border-radius: 20px;
+#nameContainer {
+    display: flex;
+    justify-content: center;
+}
+
+button#smaller,
+button#bigger {
     padding: 0px;
-    height: 40px;
     width: 40px;
+}
+
+#controlContainer button {
+    font-size: 1.1em;
+    border-radius: 1px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.075);
+    color: white;
+    border-color: white;
+    overflow-x: hidden;
+}
+
+#controlContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    height: 220px;
+    flex-wrap: wrap;
+}
+#repo {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+#paused {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+@keyframes rainbowText {
+  0%   {color: rgb(255, 71, 71);}
+  25%  {color: rgb(255, 0, 251);}
+  50%  {color: rgb(21, 170, 229);}
+  100% {color: rgb(232, 255, 54);}
+}
+
+a:hover{
+    color: cyan;
+}
+a, a:visited{
+    color:white;
 }
