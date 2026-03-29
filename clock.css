@@ -46,7 +46,7 @@ button#bigger {
     background-color: rgba(0, 0, 0, 0.075);
     color: white;
     border-color: white;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 #controlContainer {
@@ -57,6 +57,11 @@ button#bigger {
     flex-wrap: wrap;
 }
 #repo {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+#paused {
     display: flex;
     justify-content: center;
     align-items: end;

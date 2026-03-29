@@ -2,41 +2,42 @@ console.log("fail ühendatud");
 const pi = 3.14;
 let hours, minutes, seconds, day, month, year, dateTime;
 let fontSize = 100;
+let pressSpace = false
 
-function changeFontSizeBigger(){
+function changeFontSizeBigger() {
     fontSize = fontSize + 5;
-    if(fontSize > 200){
+    if (fontSize > 200) {
         fontSize = 200;
         window.alert("Fondi suurus ei saa olla üle 200 piksli");
     }
-    document.getElementById('dateContainer').style.fontSize =  fontSize + "px";
-    document.getElementById('clockContainer').style.fontSize =  fontSize + "px";
+    document.getElementById('dateContainer').style.fontSize = fontSize + "px";
+    document.getElementById('clockContainer').style.fontSize = fontSize + "px";
 }
 
-function changeFontSizeSmaller(){
+function changeFontSizeSmaller() {
     fontSize = fontSize - 5;
-    if(fontSize < 10){
+    if (fontSize < 10) {
         fontSize = 10;
         window.alert("Fondi suurus ei saa olla alla 10 piksli");
     }
-    document.getElementById('dateContainer').style.fontSize =  fontSize + "px";
-    document.getElementById('clockContainer').style.fontSize =  fontSize + "px";
+    document.getElementById('dateContainer').style.fontSize = fontSize + "px";
+    document.getElementById('clockContainer').style.fontSize = fontSize + "px";
 }
 
-function randomizeBackgroundColor(){
+function randomizeBackgroundColor() {
     min = 0;
     max = 255;
     // random valemi leidsin googeldades Math.random()
     r = Math.floor(Math.random() * (max - min + 1)) + min;
     g = Math.floor(Math.random() * (max - min + 1)) + min;
     b = Math.floor(Math.random() * (max - min + 1)) + min;
-    
-    document.getElementById('clockBody').style.backgroundColor = "rgb(" + r +","+ g + "," + b +")";
+
+    document.getElementById('clockBody').style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
 }
 
-function changeClockOrder(){
+function changeClockOrder() {
     order = document.getElementById('container').style.flexDirection;
-    if(order == "column"){
+    if (order == "column") {
         document.getElementById('container').style.flexDirection = "column-reverse";
         console.log("reverse")
     } else {
@@ -45,17 +46,17 @@ function changeClockOrder(){
     }
 }
 
-function moveClock(){
+function moveClock() {
     direction = this.id;
-    if(direction == "moveLeft"){
+    if (direction == "moveLeft") {
         console.log("left");
-        document.getElementById('container').style.alignItems ="flex-start";
-    } else if (direction == "moveRight"){
+        document.getElementById('container').style.alignItems = "flex-start";
+    } else if (direction == "moveRight") {
         console.log("right");
-        document.getElementById('container').style.alignItems ="flex-end";
+        document.getElementById('container').style.alignItems = "flex-end";
     } else {
         console.log("center");
-        document.getElementById('container').style.alignItems ="center";
+        document.getElementById('container').style.alignItems = "center";
     }
 }
 
@@ -66,55 +67,71 @@ function upDateClock() {
     minutes = dateTime.getMinutes();
     seconds = dateTime.getSeconds();
 
-    if(hours < 10){
+    if (hours < 10) {
         hours = "0" + hours;
     }
-    if(minutes < 10){
+    if (minutes < 10) {
         minutes = "0" + minutes;
     }
-    if(seconds < 10){
+    if (seconds < 10) {
         seconds = "0" + seconds;
     }
 
-    document.getElementById('hours').innerHTML = hours + ":";
-    document.getElementById('minutes').innerHTML = minutes + ":";
-    document.getElementById('seconds').innerHTML = seconds;
+    if (pressSpace == false) {
+        document.getElementById('hours').innerHTML = hours + ":";
+        document.getElementById('minutes').innerHTML = minutes + ":";
+        document.getElementById('seconds').innerHTML = seconds;
+    } else {}
+    
+
 }
 
-function updateDate(){
+function updateDate() {
     dateTime = new Date();
     day = dateTime.getDate();
     month = dateTime.getMonth() + 1;
     year = dateTime.getFullYear();
 
-    if(day < 10){
+    if (day < 10) {
         day = "0" + day;
     }
-    if(month < 10){
+    if (month < 10) {
         month = "0" + month;
     }
 
-    document.getElementById('day').innerHTML = day + ".";
-    document.getElementById('month').innerHTML = month + ".";
-    document.getElementById('year').innerHTML = year;
+    if (pressSpace == false) {
+        document.getElementById('day').innerHTML = day + ".";
+        document.getElementById('month').innerHTML = month + ".";
+        document.getElementById('year').innerHTML = year;
+    } else {}
 }
 
-function checkKey(e){
+function checkKey(e) {
     console.log(e.keyCode);
-    if(e.keyCode == 43){
+    if (e.keyCode == 43) {
         changeFontSizeBigger();
     }
-    if(e.keyCode == 45){
+    if (e.keyCode == 45) {
         changeFontSizeSmaller();
+    }
+    if (e.keyCode == 32) {
+        if (pressSpace == false){
+            pressSpace = true;
+            document.getElementById('paused').innerHTML = "PAUSED";
+        } else {
+            pressSpace = false;
+            document.getElementById('paused').innerHTML = "";
+        }
+        
     }
 }
 
-function rainbowClock(){
-    
-    if(document.getElementById('clockContainer').style.animationName == "none"){
+function rainbowClock() {
+
+    if (document.getElementById('clockContainer').style.animationName == "none") {
         document.getElementById('clockContainer').style.animationName = "rainbowText";
         document.getElementById('dateContainer').style.animationName = "rainbowText";
-        
+
     } else {
         document.getElementById('clockContainer').style.animationName = "none";
         document.getElementById('dateContainer').style.animationName = "none";
