@@ -1,5 +1,22 @@
 # kodutoo-1
 
+Muudetud:
+  Autor: Gert Matthias Eljas
+
+![Minu kella ekraanipilt](kell.png)
+
+Funktsionaalsus:
+Kella juures saab muuta...
+1. fondi suurust
+2. teksti värvi
+3. tausta värvi
+4. fondi stiili
+5. kella stiili (kas näitab 12h või 24h kella)
+6. kella asukohta
+Iga funktsiooni jaoks tegin eraldi nupu.
+
+Koodi kirjutamisel kasutasin abiks nii õppejõu poolt ette antud lehekülgi (nt: http://www.w3schools.com/jsref/dom_obj_event.asp) kui ka tehisintellekti Geminit. Promptid lisasin koodi sisse kommentaaridena. (Iga kord kui AI abi küsisin, siis lisasin kõik 3 koodifaili promptile juurde, et ta paremini aru saaks, aga seda enda koodis olevates kommentaarides ei maini.)
+
 ## Tähtaeg 01.04.2026 23:59
 
 Max 20 punkti.
