@@ -2,13 +2,13 @@
 
 See projekt on veebipõhine digitaalne kell, mis on ehitatud kasutades objektorienteeritud JavaScripti (OOP). Rakendus toimib nii praktilise ajanäitajana kui ka visuaalselt kaasahaarava taustana, pakkudes kasutajale palju võimalusi kella välimuse isikupärastamiseks.
 
-##Autor
+## Autor
 **Raimond Lige**
 
-##Ekraanipilt
+## Ekraanipilt
 ![Rakenduse ekraanipilt](./ekraanipilt.png)
 
-##Funktsionaalsus
+## Funktsionaalsus
 
 Kella on võimalik juhtida nii ekraanil olevate nuppude kui ka osaliselt klaviatuuriga. Kasutaja saab muuta järgmisi atribuute ja efekte: 
 
@@ -22,7 +22,7 @@ Kella on võimalik juhtida nii ekraanil olevate nuppude kui ka osaliselt klaviat
 8. **Dünaamiline tervitus:** Kell jälgib kasutaja kellaaega ning kuvab automaatselt sobivat tervitust (nt "Tere hommikust!", "Tere päevast!", "Tere õhtust!" või "Head ööd!").
 9. **Interaktiivne taust:** Kella taustal jookseb `particles.js` raamatukogu abil loodud osakeste süsteem, mis reageerib hiirekursorile (kursor tõmbab osakesi ligi ja klikkides tekib osakesi juurde).
 
-#Kasutatud tehnoloogiad
+## Kasutatud tehnoloogiad
 * **HTML5:** Lehe struktuur.
 * **CSS3:** Kujundus, paigutus (Flexbox), sujuvad üleminekud (`transition`) ja helendavad efektid (`text-shadow`).
 * **JavaScript (ES6):** Kella loogika, objektorienteeritud lähenemine (klass `Clock`), sündmustekuulajad (Event Listeners) ja DOM-i manipuleerimine.
