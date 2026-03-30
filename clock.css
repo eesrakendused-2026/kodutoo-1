@@ -1,15 +1,26 @@
 body{
     margin:0;
     padding:0;
-    background-color: black;
+    background-color: #0b0c10;
     font-size: 30px;
     color:white;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 #container{
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
 }
@@ -17,13 +28,41 @@ body{
 #clockContainer, #dateContainer{
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+#buttonContainer {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 button{
-    font-size: 1.1em;
-    border-radius: 20px;
-    padding: 0px;
-    height: 40px;
-    width: 40px;
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 10px 15px;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.glow {
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 30px currentColor,
+        0 0 40px currentColor;
+    transition: text-shadow 0.3s ease;
 }

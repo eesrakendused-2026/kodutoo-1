@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="clock.js" defer></script>
     <link rel="stylesheet" href="clock.css">
     <title>Kell</title>
 </head>
 
 <body>
-    <!-- HTML struktureerimiseks: Ctrl+A Ctrl+K Ctrl+F -->
+    <div id="particles-js"></div>
+
     <div id="container">
+        <div id="authorInfo" style="font-size: 14px; margin-bottom: 20px;">
+            Autor: Raimond Lige | <a href="https://github.com/raimlige/er-kodutoo-1/tree/main" style="color: lightblue;">Minu Repo</a>
+        </div>
+
+        <div id="greeting" style="font-size: 0.8em; margin-bottom: 10px; opacity: 0.8;">Tere!</div>
+
         <div id="clockContainer">
             <div id="hours">00:</div>
             <div id="minutes">00:</div>
             <div id="seconds">00</div>
+            <div id="ampm" style="margin-left: 10px; font-size: 0.6em;"></div>
         </div>
+
         <div id="dateContainer">
             <div id="day">01.</div>
             <div id="month">01.</div>
             <div id="year">2000</div>
         </div>
+
         <div id="buttonContainer">
             <button id="bigger">+</button>
             <button id="smaller">-</button>
+            <button id="changeColorBtn">Värv</button>
+            <button id="changeFontBtn">Font</button>
+            <button id="toggleFormatBtn">12/24h</button>
+            <button id="toggleDateBtn">Kuupäev</button>
+            <button id="changeBgBtn">Taust</button>
+            <button id="toggleGlowBtn">Kuma</button>
         </div>
     </div>
 </body>
