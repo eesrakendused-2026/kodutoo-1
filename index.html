@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="clock.js" defer></script>
+    <link rel="stylesheet" href="clock.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Montserrat&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <title>Kell</title>
+</head>
+
+<body>
+    <main>
+        <video id="bgVideo" autoplay muted loop playsinline></video>
+        <div id="container">
+            <div id="clockContainer">
+                <div id="hours">00:</div>
+                <div id="minutes">00:</div>
+                <div id="seconds">00</div>
+                <div id="ampm"></div>
+            </div>
+            <div id="dateContainer">
+                <div id="day">01.</div>
+                <div id="month">01.</div>
+                <div id="year">2000</div>
+            </div>
+            <div id="dateDayContainer">
+                <div id="weekday"></div>
+            </div>
+        </div>
+        <div id="button">
+            <button type="button" id="toggleSettings"></button>
+        </div>
+        <div id="settings">
+            <div>
+                <label for="format">Ajavorming:</label>
+                <select id="format" name="format">
+                    <option value="24">24-tunnine</option>
+                    <option value="12">12-tunnine</option>
+                </select>
+            </div>
+            <div>
+                <label for="fontSize">Kella suurus:</label>
+                <input type="number" id="fontSize" name="fontSize" min="5" max="1000" value="100">
+            </div>
+            <div>
+                <label for="dateSize">Kuupäeva suurus:</label>
+                <input type="number" id="dateSize" name="dateSize" min="5" max="1000" value="100">
+            </div>
+            <div>
+                <label for="daySize">Nädalapäeva suurus:</label>
+                <input type="number" id="daySize" name="daySize" min="5" max="1000" value="100">
+            </div>
+            <div>
+                <label for="fontFamily">Muuda fonti:</label>
+                <select id="fontFamily" name="fontFamily">
+                    <option value="'Share Tech Mono', monospace">Share Tech Mono</option>
+                    <option value="'Orbitron', sans-serif">Orbitron</option>
+                    <option value="'Montserrat', sans-serif">Montserrat</option>
+                </select>
+            </div>
+            <div>
+                <label for="fontColor">Teksti värv:</label>
+                <input type="color" id="fontColor" name="fontColor" value="#000000">
+            </div>
+            <div>
+                <label for="backgroundImage">Vali taustapilt:</label>
+                <input type="file" id="backgroundImage" name="backgroundImage" accept="image/*">
+            </div>
+            <div>
+                <label for="showSeconds">Näita sekundeid:</label>
+                <input type="checkbox" id="showSeconds" name="showSeconds" checked>
+            </div>
+            <div>
+                <button type="button" id="saveSettings">Salvesta</button>
+                <button type="button" id="resetSettings">Lähtesta</button>
+                <button type="button" id="fullscreen">Täisekraan</button>
+            </div>
+            <div id="credits">
+                <p>Tanel Metshein</p>
+                <a href="https://github.com/W1ttyRat/kodutoo-1">Github Repo</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
