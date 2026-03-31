@@ -5,6 +5,7 @@ let currentFontIndex = 0;
 const fonts = ["Arial", "Verdana", "Roboto", "Times New Roman"];
 const textColorPicker = document.getElementById('textColor');
 const bgColorPicker = document.getElementById('bgColor');
+let shadowActive = true;
 
 function changeFontSizeBigger() {
     fontSize = fontSize + 5;
@@ -84,19 +85,55 @@ function changeFont() {
     document.body.style.fontFamily = fonts[currentFontIndex];
 }
 
+function toggleDateVisibility() {
+    const dateContainer = document.getElementById('dateContainer');
+    const toggleDateBtn = document.getElementById('toggleDate');
+    
+    if (dateContainer.style.display === "none") {
+        dateContainer.style.display = "flex"; 
+        toggleDateBtn.innerHTML = "Peida kuupäev";
+    } else {
+        dateContainer.style.display = "none";
+        toggleDateBtn.innerHTML = "Näita kuupäeva";
+    }
+}
+
+function toggleShadow() {
+    const clock = document.getElementById('clockContainer');
+    const shadowBtn = document.getElementById('toggleShadow');
+
+    if (shadowActive) {
+        clock.style.textShadow = "none";
+        shadowBtn.innerHTML = "Näita varjutust";
+    } else {
+        clock.style.textShadow = "0 0 20px rgba(255,255,255,0.5)";
+        shadowBtn.innerHTML = "Peida varjutus";
+    }
+    
+    shadowActive = !shadowActive;
+}
+
 function checkKey(e) {
     console.log(e.keyCode);
-    // Vajutades "+" nuppu läheb tekst suuremaks
+    // Vajutades "+" nuppu läheb tekst suuremaks.
     if (e.keyCode == 43) {
         changeFontSizeBigger();
     }
-    // Vajutades "-" nuppu läheb tekst väiksemaks
+    // Vajutades "-" nuppu läheb tekst väiksemaks.
     if (e.keyCode == 45) {
         changeFontSizeSmaller();
     }
-    // Vajutades tühikuklahvi(spacebar) muutub teksti font
+    // Vajutades tühikuklahvi(space bar) muutub teksti font.
     if (e.keyCode == 32) {
         changeFont();
+    }
+    // Vajutades "S" klahvi lülitub teksti varjutus sisse/välja.
+    if (e.keyCode == 115) {
+        toggleShadow();
+    }
+    // Vajutades "D" klahvi lülitub kuupäev ja nädalapäev sisse/välja.
+    if (e.keyCode == 100) {
+        toggleDateVisibility();
     }
 }
 
@@ -117,4 +154,6 @@ setInterval(updateDate, 60000);
 document.getElementById('bigger').addEventListener('click', changeFontSizeBigger);
 document.getElementById('smaller').addEventListener('click', changeFontSizeSmaller);
 document.getElementById('changeFont').addEventListener('click', changeFont);
+document.getElementById('toggleDate').addEventListener('click', toggleDateVisibility);
+document.getElementById('toggleShadow').addEventListener('click', toggleShadow);
 window.addEventListener('keypress', checkKey);

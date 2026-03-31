@@ -1,11 +1,15 @@
 ### Autor: Risto Leitalu
-
+Kellaaja tekstile on algeliselt lisatud text-shadow, et oleks neoonefekt. Ekraani üleval on poolläbipaistmatu tekst, kus on autori nimi ning tsüaansinine link github repole. Veebileht on algselt must koos valge tekstiga.
+## Funktsioonid ning nupud on järgnevad: 
 1. Vajutades "+" suurendab fondi suurust. Toimib ka "+" klahvi vajutades.
 1. Vajutades "-" vähendab fondi suurust. Toimib ka "-" klahvi vajutades.
-1. Vajutades klaviatuuril tühikuklahvi (Spacebar) või "Vaheta Fonti" nuppu muutub teksti font.
+1. Vajutades klaviatuuril tühikuklahvi (Space bar) või "Vaheta Fonti" nuppu muutub teksti font.
 1. Vajutades "Teksti värv:" kõrvalolevale värvilisele ristkülikule saab valida teksti värvi kasutades värvivalijat (color picker). 
 1. Vajutades "Tausta värv:" kõrvalolevale värvilisele ristkülikule saab valida taustavärvi kasutades värvivalijat (color picker). 
 1. Vajutades "24h" nupule saab valida kas 12h formaati või 24h formaati
+1. Vajutades "Peida kuupäev" nupule kaob kuupäev ja nädalapäev ära. Selle asemel tekib "Näita kuupäev" nupp, mis taastab eelneva oleku. Vajutades "D" klahvi toimub sama asi.
+1. Vajutades "Peida varjutus" nupule kaob kellaaja teksti neoonefekt. Selle asemel tekib "Näita varjutust" nupp, mis taastab eelneva oleku. vajutades klahvi "S" juhtub sama asi.
+
 ## ekraanipilt rakendusest:
 <img width="1300" height="892" alt="image" src="https://github.com/user-attachments/assets/791f35ee-a122-4284-965a-4baddefc0aac" />
 
