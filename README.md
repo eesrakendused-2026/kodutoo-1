@@ -11,7 +11,8 @@ Kellaaja tekstile on algeliselt lisatud text-shadow, et oleks neoonefekt. Ekraan
 1. Vajutades "Peida varjutus" nupule kaob kellaaja teksti neoonefekt. Selle asemel tekib "Näita varjutust" nupp, mis taastab eelneva oleku. vajutades klahvi "S" juhtub sama asi.
 
 ## ekraanipilt rakendusest:
-<img width="1300" height="892" alt="image" src="https://github.com/user-attachments/assets/791f35ee-a122-4284-965a-4baddefc0aac" />
+<img width="1917" height="957" alt="image" src="https://github.com/user-attachments/assets/b08b48e1-5e6b-4dd2-ac5a-bf1795379221" />
+
 
 # kodutoo-1
 
