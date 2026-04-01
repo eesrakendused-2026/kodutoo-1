@@ -1,4 +1,5 @@
 # Kellarakendus
+<img width="1918" height="982" alt="image" src="https://github.com/user-attachments/assets/268117d0-2465-401f-8eed-a2d6f3bc2db1" />
 
 ## Autor
 Kristo Kukk
