@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
 body{
     margin:0;
     padding:0;
@@ -13,6 +14,19 @@ body{
     min-height: 100vh;
     height: 100vh;
     align-items: center;
+    justify-content: center;
+}
+
+#authorLabel {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    z-index: 1000;
+    font-family: "Shadows Into Light Two", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #clockContainer, #dateContainer{
@@ -20,8 +34,15 @@ body{
     justify-content: center;
     font-size: 100px;
     backdrop-filter: blur(0.8px);
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
+/* Pool järgnevast button CSSist on pärit leheküljelt:
+https://getcssscan.com/css-buttons-examples
+Kasutatud on Button 74, mida on kohandatud*/
 button{
     font-size: 1.1em;
     border-radius: 20px;
@@ -29,6 +50,17 @@ button{
     height: 40px;
     width: 40px;
     min-width: 40px;
+    border: 2px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    touch-action: manipulation;
+    font-family: "Shadows Into Light Two", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Värvivalik */
@@ -57,7 +89,7 @@ button{
     width: auto;
     border: 2px solid white;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(233, 130, 130, 0.1);
     color: white;
     transition: 0.2s;
 }
@@ -68,13 +100,14 @@ button{
 
 #color {
     position: fixed;
-    bottom: 20px;
+    bottom: 10px;
     left: 20px;
     height: 40px;
     width: 120px;
     font-size: 20px;
     padding: 2px;
 }
+
 
 /*Pildivalik*/
 #imageContainer{
@@ -114,10 +147,73 @@ button{
 
 #image {
     position: fixed;
-    bottom: 20px;
+    bottom: 10px;
     left: 160px;
     height: 40px;
     width: 120px;
     font-size: 20px;
     padding: 2px;
+}
+/*githubi nupp*/
+#github {
+    position: fixed;
+    bottom: 10px;
+    right: 200px;
+    height: 40px;
+    width: 120px;
+    font-size: 20px;
+    padding: 2px;
+}
+/*24h-12h nupp*/
+#timeFormat {
+    position: fixed;
+    bottom: 10px;
+    left: 300px;
+    height: 40px;
+    width: 120px;
+    font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+#secondDisplay {
+    position: fixed;
+    bottom: 10px;
+    left: 440px;
+    height: 40px;
+    min-width: 160px;
+    font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
+}
+/* Muudetud asukohta veidi, et ei jääks tähtedele ette */
+#bigger, 
+#smaller {
+    margin-top: 30px;
+}
+
+/*Nädalapäeva CSS*/
+#weekDay {
+    font-size: 50px;
+
+}
+/* Kuupäeva formaat*/
+#dateFormat {
+    position: fixed;
+    bottom: 10px;
+    left: 620px; 
+    height: 40px;
+    min-width: 140px;
+    font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+#color,
+#image,
+#github,
+#timeFormat,
+#secondDisplay,
+#dateFormat {
+    cursor: pointer;
 }

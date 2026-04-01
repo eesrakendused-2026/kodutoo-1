@@ -4,29 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="clock.js" defer></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+    </style>
     <link rel="stylesheet" href="clock.css">
     <title>Screensaver</title>
 </head>
 
 <body>
     <!-- HTML struktureerimiseks: Ctrl+A Ctrl+K Ctrl+F -->
+    <div id="authorLabel">Autor: Karmen Kõiv</div>
+
     <div id="container">
         <div id="clockContainer">
             <div id="hours">00:</div>
-            <div id="minutes">00:</div>
-            <div id="seconds">00</div>
+            <div id="minutes">00</div>
+            <div id="seconds">:00</div>
+            <div id="format"></div>
         </div>
         <div id="dateContainer">
             <div id="day">01.</div>
             <div id="month">01.</div>
             <div id="year">2000</div>
         </div>
+        <div id="weekDay">
+            <div id="weekday"></div>
+        </div>
         <div id="buttonContainer">
             <button id="bigger">+</button>
             <button id="smaller">-</button>
             <button id="color">Taustavärv</button>
             <button id="image">Taustapilt</button>
-            <button id="secondDisplay">Sekundite kuvamine</button>
+            <button id="github">GitHub</button>
+            <button id="timeFormat">24h/12h</button>
+            <button id="secondDisplay">Peida sekundid</button>
+            <button id="dateFormat">Kuupäevaformaat</button>
         </div>
         <div id="colorContainer" style="display:none;">
             <label>Vali taustavärv:</label>

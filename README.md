@@ -18,7 +18,7 @@ Lisaks sellele on lisatud kodutöö jaoks vajaminev: nädalapäeva kuvamine, ees
 Kasutatud on Gemini TI abi ning ka üldise interneti abi. 
 
 Gemini prompt on toodud välja, seal kus seda esimest korda kasutatud on. Samast prompt'ist tulenev kood on ka mitmeid ridu hiljem kasutusel, samamoodi viitega.
-
+-----------
 Ekraanipilt:
 
 ![algne ekraanipilt kellast](image.png)
