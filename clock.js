@@ -1,13 +1,14 @@
 console.log("fail ühendatud");
 const pi = 3.14;
 let hours, minutes, seconds, day, month, year, dateTime;
-let fontSize = 25;
+let fontSize = 100;
+let bgState = 0;
 
 function changeFontSizeBigger(){
     fontSize = fontSize + 5;
-    if(fontSize > 200){
-        fontSize = 200;
-        window.alert("Fondi suurus ei saa olla üle 200 piksli");
+    if(fontSize > 300){
+        fontSize = 300;
+        window.alert("Fondi suurus ei saa olla üle 300 piksli");
     }
     document.getElementById('dateContainer').style.fontSize =  fontSize + "px";
     document.getElementById('clockContainer').style.fontSize =  fontSize + "px";
@@ -71,12 +72,63 @@ function checkKey(e){
     if(e.keyCode == 45){
         changeFontSizeSmaller();
     }
+    if(e.keyCode == 32){
+        changeBackground();
+    }
+    if(e.keyCode == 97 || e.keyCode == 100 || e.keyCode == 119 || e.keyCode == 115){
+        changeLocation(e.keyCode);
+    }
+}
+
+
+function changeBackground() {
+    if(bgState === 0){
+        document.body.style.background = "black";
+        document.body.style.backgroundImage = "none";
+        bgState = 1;
+    } 
+    else if(bgState === 1){
+        document.body.style.backgroundImage = "url('img/batman-joonistus.png')";
+        bgState = 2;
+    } 
+    else {
+        document.body.style.backgroundImage = "url('img/spiderman-joonistus.png')";
+        bgState = 0;
+    }
+}
+
+let movementHorizontal = 0;
+let movementVertical = 0;
+function changeLocation(key){
+    if(key == 97){
+        movementHorizontal = movementHorizontal - 5
+        document.getElementById('container').style.left =  movementHorizontal + "px";
+    }
+    if(key == 100){
+        movementHorizontal = movementHorizontal + 5
+        document.getElementById('container').style.left =  movementHorizontal + "px";
+    }
+    if(key == 119){
+        movementVertical = movementVertical - 5
+        document.getElementById('container').style.top =  movementVertical + "px";
+    }
+    if(key == 115){
+        movementVertical = movementVertical + 5
+        document.getElementById('container').style.top =  movementVertical + "px";
+    }
+}
+
+function changeFontCursive(){document.getElementById('container').style.fontFamily = "cursive";}
+function changeFontFantasy(){document.getElementById('container').style.fontFamily = "fantasy";}
+
+function clickColor(color){
+    document.getElementById("container").style.color = color;
 }
 
 upDateClock();
 updateDate();
 setInterval(upDateClock, 1000);
 setInterval(updateDate, 60000);
-document.getElementById('bigger').addEventListener('click', changeFontSizeBigger);
-document.getElementById('smaller').addEventListener('click', changeFontSizeSmaller);
+//document.getElementById('bigger').addEventListener('click', changeFontSizeBigger);
+//document.getElementById('smaller').addEventListener('click', changeFontSizeSmaller);
 window.addEventListener('keypress', checkKey);

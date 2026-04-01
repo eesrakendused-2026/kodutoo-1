@@ -10,21 +10,29 @@
 
 <body>
     <!-- HTML struktureerimiseks: Ctrl+A Ctrl+K Ctrl+F -->
+    <p class="audiowide-regular">Marcus Haljasoks <a href="//github.com/matuhaljas/eesrakendused-kodutoo-1">Repositoorium leitav siit!</a></p>
+    <div class="top-right">
+        <p class="selection" onClick="changeFontCursive()" style="font-family: cursive;">Cursive</p>
+        <p class="selection" onClick="changeFontFantasy()" style="font-family: fantasy;">Fantasy</p>
+    </div>
     <div id="container">
-        <div id="clockContainer">
+        <div id="clockContainer" class="prevent-select" onClick="changeFontSizeBigger()">
             <div id="hours">00:</div>
             <div id="minutes">00:</div>
             <div id="seconds">00</div>
         </div>
-        <div id="dateContainer">
+        <div id="dateContainer" class="prevent-select" onClick="changeFontSizeSmaller()">
             <div id="day">01.</div>
             <div id="month">01.</div>
             <div id="year">2000</div>
         </div>
+        <!--
         <div id="buttonContainer">
             <button id="bigger">+</button>
             <button id="smaller">-</button>
         </div>
+        -->
     </div>
+    <input type="color" style="z-index: 10; position: absolute;" onchange="clickColor(this.value)">
 </body>
 </html>
