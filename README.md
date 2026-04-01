@@ -10,7 +10,7 @@ Lisatud funktsionaalsused (ning juba olemasolevad):
 5. '+' ja '-' nuppudega saab muuta kellaaja ning kuupäeva suuremaks. Nädalapäeva ei ole võimalik. 
 6. Saab muuta kuupäeva formaati - DD.MM.YYYY või MM.DD.YYYY.
 -----------
-Pea igale nupule vajutamist avaneb vastav alammenüü. Selle saab sulgeda vajutades nupule uuesti (põhimõttega, et kasutaja saaks hõlpsamini valida erinevate valikute vahel).
+Peale pea igale nupule vajutamist avaneb vastav alammenüü. Selle saab sulgeda vajutades nupule uuesti (põhimõttega, et kasutaja saaks hõlpsamini valida erinevate valikute vahel).
 
 Lisaks sellele on lisatud kodutöö jaoks vajaminev: nädalapäeva kuvamine, ees- ja perekonnanimi, viide Githubi repositoorumile (nupuga, mis on tegelikult link).
 
