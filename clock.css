@@ -2,8 +2,11 @@ body{
     margin:0;
     padding:0;
     background-color: black;
+    font-family: 'Courier New', monospace;
     font-size: 30px;
     color:white;
+    background: #e3e3e3;
+    background: linear-gradient(137deg,rgba(227, 227, 227, 1) 0%, rgba(212, 212, 212, 1) 26%, rgba(181, 181, 181, 1) 100%);
 }
 
 #container{
@@ -14,10 +17,11 @@ body{
     justify-content: center;
 }
 
-#clockContainer, #dateContainer{
+#clockContainer, #dateContainer, #weekday {
     display: flex;
     justify-content: center;
     font-size: 25px;
+    color:rgba(102, 102, 102, 1);
 }
 
 button{
@@ -26,4 +30,35 @@ button{
     padding: 0px;
     height: 40px;
     width: 40px;
+}
+
+#settings {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#darkModeButton, #formatButton, #secondsButton, #musicButton {
+    border-radius: 0;
+    display: flex;
+    height:fit-content;
+    width: fit-content;
+    padding: 3px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    background-color: rgb(69, 69, 69);
+}
+
+#contact {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: rgb(69, 69, 69);
+   text-align: center;
+   font-size: 70%;
 }
