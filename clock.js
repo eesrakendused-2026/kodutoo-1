@@ -4,6 +4,10 @@ let hours, minutes, seconds, day, month, year, dateTime, weekday;
 let fontSize = 150;
 const dayNames = ["Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev", "Pühapäev"];
 
+let posX = 0;
+let posY = 0;
+const moveStep = 20;
+
 function changeFontSizeBigger(){
     fontSize = fontSize + 10;
     if(fontSize > 200){
@@ -54,6 +58,17 @@ function changeClockFont() {
 function changeDateFont(){
     dateFontIndex = (dateFontIndex + 1) % fonts.length;
     document.getElementById('dateContainer').style.fontFamily = fonts[dateFontIndex];
+}
+
+function moveClock(direction) {
+    if (direction === "up") posY -= moveStep;
+    if (direction === "down") posY += moveStep;
+    if (direction === "left") posX -= moveStep;
+    if (direction === "right") posX += moveStep;
+
+    const transformValue = `translate(${posX}px, ${posY}px)`;
+    document.getElementById('clockContainer').style.transform = transformValue;
+    document.getElementById('dateContainer').style.transform = transformValue;
 }
 
 function upDateClock() {
@@ -112,6 +127,18 @@ function checkKey(e){
     if(e.key == "2"){
         changeDateFont();
     }
+    if(e.key === "ArrowUp"){
+        moveClock("up");
+    }
+    if(e.key === "ArrowDown"){
+        moveClock("down");
+    }
+    if(e.key === "ArrowLeft"){
+        moveClock("left");
+    }
+    if(e.key === "ArrowRight"){
+        moveClock("right");
+    }
 }
 
 upDateClock();
@@ -123,4 +150,4 @@ document.getElementById('smaller').addEventListener('click', changeFontSizeSmall
 document.getElementById('clockContainer').addEventListener('click', changeClockColor);
 document.getElementById('dateContainer').addEventListener('click', changeDateColor);
 document.getElementById('container').addEventListener('click', changeBgColor);
-window.addEventListener("keypress", checkKey);
+window.addEventListener("keydown", checkKey);
