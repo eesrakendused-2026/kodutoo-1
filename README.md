@@ -18,5 +18,5 @@ Vastavalt nõuetele saab muuta 6 atribuuti:
 
 ## Viited
 Koodi kirjutamisel on kasutatud AI abi (Gemini 3 Flash) järgmistes osades:
-- Nädalapäeva nime genereerimine `toLocaleDateString` abil.
+- Nädalapäeva nime genereerimine `toLocaleDateString` abil
 - CSS-i täiendamine `vw` ühikutega responsiivsuse tagamiseks.
