@@ -1,4 +1,4 @@
-# kodutoo-1 — lauakell (Aurora)
+# kodutoo-1 — lauakell
 
 ## Tähtaeg 01.04.2026 23:59
 
@@ -8,9 +8,7 @@
 
 ## Ekraanipilt
 
-![Lauakell Aurora](screenshot.png)
-
-> Võid selle pildi asendada oma brauseri täisekraanipildiga, kui soovid täpsemat esitlust.
+![Lauakell](screenshot.png)
 
 ## Funktsionaalsus
 
