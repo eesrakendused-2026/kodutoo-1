@@ -57,6 +57,7 @@ let posX = 0;
 let posY = 0;
 
 
+
 document.addEventListener("keydown", (e) => {
 
     if (e.code === "Space") {
@@ -115,4 +116,17 @@ audio.addEventListener("ended", () => {
     strawhat.style.top = newY + "vh";
 
     strawhat.style.bottom = "auto";
+});
+
+const fontSelect = document.getElementById("fontSelect");
+const colorSelect = document.getElementById("colorSelect");
+
+fontSelect.addEventListener("change", () => {
+    timeEl.style.fontFamily = fontSelect.value;
+    dateEl.style.fontFamily = fontSelect.value;
+});
+
+colorSelect.addEventListener("change", () => {
+    timeEl.style.color = colorSelect.value;
+    dateEl.style.color = colorSelect.value;
 });
