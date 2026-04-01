@@ -1,29 +1,48 @@
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
     background-color: black;
-    font-size: 30px;
-    color:white;
+    color: white;
+    font-family: sans-serif;
+    transition: all 0.5s ease; /* Sujuv üleminek värvidele */
 }
 
-#container{
+#container {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh; /* Täisekraan */
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
 
-#clockContainer, #dateContainer{
+#clockContainer {
     display: flex;
-    justify-content: center;
-    font-size: 25px;
+    font-size: 8vw; /* Protsentuaalne suurus ekraani laiuse järgi */
+    font-weight: bold;
 }
 
-button{
-    font-size: 1.1em;
-    border-radius: 20px;
-    padding: 0px;
-    height: 40px;
-    width: 40px;
+#dateContainer {
+    display: flex;
+    font-size: 3vw;
+    margin-top: 20px;
+}
+
+#buttonContainer {
+    margin-top: 30px;
+}
+
+button {
+    font-size: 1.5rem;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid white;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.4);
 }
