@@ -1,0 +1,80 @@
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Elektrooniline kell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Generated with help from Microsoft Copilot -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main id="app">
+    <section id="clock-wrapper">
+      <div id="clock-container">
+        <div id="time"></div>
+        <div id="date"></div>
+        <div id="weekday"></div>
+        <div id="year"></div>
+      </div>
+
+      <section id="settings">
+        <h2>Seaded</h2>
+
+        <div class="setting-row">
+          <label for="bgColor">Taustavärv</label>
+          <input type="color" id="bgColor" value="#000000">
+        </div>
+
+        <div class="setting-row">
+          <label for="clockColor">Kella värv</label>
+          <input type="color" id="clockColor" value="#00ffcc">
+        </div>
+
+        <div class="setting-row">
+          <label for="fontSize">Kella suurus</label>
+          <input type="range" id="fontSize" min="5" max="20" value="12">
+        </div>
+
+        <div class="setting-row">
+          <label for="fontFamily">Kirjatüüp</label>
+          <select id="fontFamily">
+            <option value="'Roboto Mono', monospace">Roboto Mono</option>
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="'Courier New', monospace">Courier New</option>
+          </select>
+        </div>
+
+        <div class="setting-row">
+          <label for="timeFormat">Kella formaat</label>
+          <select id="timeFormat">
+            <option value="24">24h</option>
+            <option value="12">12h</option>
+          </select>
+        </div>
+
+        <div class="setting-row">
+          <label for="language">Keel</label>
+          <select id="language">
+            <option value="et">Eesti</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p><span id="author-name">Martin Kullerkupp</span></p>
+    <p>
+      GitH
+      <a href="https://github.com/MartinKKP/kodutoo-1" target="_blank">
+  
+      </a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
