@@ -1,5 +1,13 @@
 # kodutoo-1
 
+**Autor:** Remus Markus Luht
+
+**Repositoorium:** [https://github.com/remus-markusluht/kodutoo-1](https://github.com/remus-markusluht/kodutoo-1)
+
+## Ekraanipilt
+
+![Lauakell](screenshot.png)
+
 ## Tähtaeg 01.04.2026 23:59
 
 Max 20 punkti.
