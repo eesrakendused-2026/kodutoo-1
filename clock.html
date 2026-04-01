@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,19 @@
 </head>
 
 <body>
-    <!-- HTML struktureerimiseks: Ctrl+A Ctrl+K Ctrl+F -->
+    <!-- HTML Struktureerimiseks: Ctrl+A Ctrl+K Ctrl+F -->
     <div id="container">
+        <div id="guide">
+            <p>Klikka tekstile või taustale värvi muutmiseks</p>
+            <p>Klahvid: [+/-] teksti suurus, [1] kella font, [2] kuupäeva font</p>
+        </div>
         <div id="clockContainer">
             <div id="hours">00:</div>
             <div id="minutes">00:</div>
             <div id="seconds">00</div>
         </div>
         <div id="dateContainer">
+            <div id="weekday">x, </div>
             <div id="day">01.</div>
             <div id="month">01.</div>
             <div id="year">2000</div>
@@ -24,6 +30,9 @@
         <div id="buttonContainer">
             <button id="bigger">+</button>
             <button id="smaller">-</button>
+        </div>
+        <div id="footer">
+            Autor: Kevin Lillemets, <a href="https://github.com/kevtlu/kodutoo-1">GitHub Repo</a>
         </div>
     </div>
 </body>
