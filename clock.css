@@ -14,11 +14,26 @@ body{
     justify-content: center;
 }
 
-#clockContainer, #dateContainer{
+#clockContainer, #dateContainer, #weekdayContainer{
     display: flex;
     justify-content: center;
-    font-size: 25px;
 }
+
+#clockContainer{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#dateContainer{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#weekdayContainer{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
 
 button{
     font-size: 1.1em;
@@ -26,4 +41,36 @@ button{
     padding: 0px;
     height: 40px;
     width: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#buttonsContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#buttonsContainer button {
+    width: auto;
+    padding: 10px;
+    font-size: 12px;
+    background: darkslategray;
+    color: white;
+    border: none;
+}
+
+#buttonsContainer button:hover {
+    background: blue;
+}
+
+#github {
+    margin-top: 30px;
+    font-size: 14px;
+    color: white;
+    gap: 20px;
+}
+
+#github a {
+    font-size: 20px;
+    color: blue;
 }
