@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,17 @@
     <title>Kell</title>
 </head>
 
-<body>
+<body id="body">
     <!-- HTML struktureerimiseks: Ctrl+A Ctrl+K Ctrl+F -->
+    <div id="settings">
+        <button id="darkModeButton">TUME</button>
+        <button id="formatButton">24H</button>
+        <button id="secondsButton">Sekundid: ON</button>
+        <div class="musicOn">
+            <audio id="audio" style="display:none;" src="http://www.sousound.com/music/jingle/jingle_02.mp3" controls autoplay loop></audio>
+            <button id="musicButton">Muusika: OFF</button>
+        </div>
+    </div>
     <div id="container">
         <div id="clockContainer">
             <div id="hours">00:</div>
@@ -21,10 +31,15 @@
             <div id="month">01.</div>
             <div id="year">2000</div>
         </div>
+        <div id="weekday">Esmaspäev</div>
         <div id="buttonContainer">
             <button id="bigger">+</button>
             <button id="smaller">-</button>
         </div>
+        <footer id="contact">
+            <p>Kristo Kukk (01/04/2026) <a href="https://github.com/KRISTO-KUKK/kodutoo-1">Github'i repo</a></p>
+        </footer>
     </div>
 </body>
+
 </html>
