@@ -1,29 +1,86 @@
-body{
-    margin:0;
-    padding:0;
-    background-color: black;
-    font-size: 30px;
-    color:white;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ff0000;
+    font-family: monospace;
 }
 
-#container{
+#container {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
-    height: 90vh;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
-#clockContainer, #dateContainer{
+#clockContainer,
+#dateContainer,
+#weekdayContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 25px;
 }
 
-button{
-    font-size: 1.1em;
+#ampm {
+    font-size: 0.5em;
+    margin-left: 6px;
+}
+
+/* "Kuidas hoida nuppude riba alati teiste elementide peal,
+   kui elemendid liiguvad ekraanil?" */
+#buttonBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: rgba(15, 15, 15, 0.97);
+    justify-content: center;
+    border-top: 1px solid #310505;
+    z-index: 100;
+}
+
+button {
+    font-size: 0.85em;
     border-radius: 20px;
-    padding: 0px;
-    height: 40px;
-    width: 40px;
+    padding: 7px 14px;
+    cursor: pointer;
+    background-color: #1a1a1a;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
+button:hover {
+    background-color: #2d0000;
+}
+
+input[type="color"] {
+    display: none;
+}
+
+#author {
+    position: fixed;
+    bottom: 55px;
+    left: 15px;
+    font-size: 15px;
+    color: #444;
+    font-family: monospace;
+}
+
+#author a {
+    color: #444;
+    text-decoration: none;
+}
+
+#author a:hover {
+    color: #888;
+    text-decoration: underline;
 }

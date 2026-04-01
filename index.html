@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="clock.js" defer></script>
+    <link rel="stylesheet" href="clock.css">
+    <title>Digitaalkell</title>
+</head>
+
+<body>
+    <!-- HTML struktureerimiseks: Ctrl+A Ctrl+K Ctrl+F -->
+    <div id="container">
+        <div id="clockContainer">
+            <span id="hours">00</span>
+            <span class="colon">:</span>
+            <span id="minutes">00</span>
+            <span class="colon">:</span>
+            <span id="seconds">00</span>
+            <span id="ampm"></span>
+        </div>
+        <div id="weekdayContainer">
+            <span id="weekday">Esmaspäev</span>
+        </div>
+        <div id="dateContainer">
+            <span id="day">01.</span>
+            <span id="month">01.</span>
+            <span id="year">2000</span>
+        </div>
+    </div>
+
+    <div id="buttonBar">
+        <button id="bigger">+</button>
+        <button id="smaller">-</button>
+        <button id="colorBtn">Värv</button>
+        <input type="color" id="clockColorInput" value="#ff0000">
+        <button id="formatBtn">12h</button>
+        <button id="dateToggleBtn">Peida kp</button>
+        <button id="bgColorBtn">Taust</button>
+        <input type="color" id="bgColorInput" value="#000000">
+        <button id="scrambleBtn">?</button>
+        <button id="resetBtn">Vaikimisi</button>
+        <button id="timezoneBtn">Jaapan</button>
+    </div>
+
+    <!-- "Kuidas teha nii, et tühik oleks alati näha HTML-is?" -->
+    <div id="author">
+        Chris-Martin Murdvee &nbsp;|&nbsp;
+        <a href="https://github.com/cmmurdvee/kodutoo-1"
+           id="repoLink"
+           target="_blank">
+            Repositoorium
+        </a>
+    </div>
+</body>
+
+</html>
