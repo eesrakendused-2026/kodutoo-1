@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="clock.js" defer></script>
+    <link rel="stylesheet" href="clock.css">
+    <title>Disco Kell</title>
+</head>
+<body>
+    <div class="name">Saskia Tork</div>
+
+    <audio id="discoMusic" src="discomusic.mp3" loop></audio>   
+
+    <div id="view">
+        
+        <div id="container">
+            <div id="clockContainer">
+                <span id="hours">00:</span>
+                <span id="minutes">00:</span>
+                <span id="seconds">00</span>
+            </div>
+
+            <div id="dateContainer">
+                <span id="day">01.</span>
+                <span id="month">01.</span>
+                <span id="year">2000</span>
+            </div>
+
+            <div id="discoWrapper">
+                <img src="disco.png" id="discoBtn" alt="Disco Ball">
+                <div id="discoTextOverlay">Disco Occasionally</div>
+            </div>
+        </div>
+
+        <div id="musicplayer">
+            <p id="now-playing"> Disco Beat</p>
+            <div class="player-controls">
+                <button id="playBtn">▶ Play</button>
+                <button id="pauseBtn">|| Pause</button>
+            </div>
+            <div class="volume-control">
+                <span>Vaiksemaks</span>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5">
+                <span>Valjemaks</span>
+            </div>
+        </div>
+
+        </div> <div class="button-group">
+            <button id="zoomIn">Suurenda +</button>
+            <button id="zoomOut">Vähenda -</button>
+            <button id="modeToggle">Light Mode</button>
+        </div>
+
+</body>
+</html>
