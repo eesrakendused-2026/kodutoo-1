@@ -4,26 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="clock.js" defer></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+    </style>
     <link rel="stylesheet" href="clock.css">
-    <title>Kell</title>
+    <title>Screensaver</title>
 </head>
 
 <body>
     <!-- HTML struktureerimiseks: Ctrl+A Ctrl+K Ctrl+F -->
+    <div id="authorLabel">Autor: Karmen Kõiv</div>
+
     <div id="container">
         <div id="clockContainer">
             <div id="hours">00:</div>
-            <div id="minutes">00:</div>
-            <div id="seconds">00</div>
+            <div id="minutes">00</div>
+            <div id="seconds">:00</div>
+            <div id="format"></div>
         </div>
         <div id="dateContainer">
             <div id="day">01.</div>
             <div id="month">01.</div>
             <div id="year">2000</div>
         </div>
+        <div id="weekDay">
+            <div id="weekday"></div>
+        </div>
         <div id="buttonContainer">
             <button id="bigger">+</button>
             <button id="smaller">-</button>
+            <button id="color">Taustavärv</button>
+            <button id="image">Taustapilt</button>
+            <button id="github">GitHub</button>
+            <button id="timeFormat">24h/12h</button>
+            <button id="secondDisplay">Peida sekundid</button>
+            <button id="dateFormat">Kuupäevaformaat</button>
+        </div>
+        <div id="colorContainer" style="display:none;">
+            <label>Vali taustavärv:</label>
+            <div id="colorButtonsContainer">
+                <button class="color" id="black">Must</button>
+                <button class="color" id="white">Valge</button>
+                <button class="color" id="gray">Hall</button>
+                <button class="color" id="green">Hele roheline</button>
+                <button class="color" id="pink">Hele roosa</button>
+                <button class="color" id="purple">Hele lilla</button>
+                <button class="color" id="blue">Hele sinine</button>
+                <button class="color" id="yellow">Hele kollane</button>
+                <button class="color" id="red">Hele punane</button>
+            </div>
+        </div>
+        <div id="imageContainer" style="display:none;">
+            <label>Vali taustapilt:</label>
+            <div id="imageButtonsContainer">
+                <button class="image" id="photo1">Pilt 1</button>
+                <button class="image" id="photo2">Pilt 2</button>
+                <button class="image" id="photo3">Pilt 3</button>
+                <button class="image" id="photo4">Pilt 4</button>
+            </div>
         </div>
     </div>
 </body>

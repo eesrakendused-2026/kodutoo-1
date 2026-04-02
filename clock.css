@@ -1,29 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
 body{
     margin:0;
     padding:0;
     background-color: black;
     font-size: 30px;
     color:white;
+    overflow: hidden;
 }
 
 #container{
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    min-height: 100vh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
+}
+
+#authorLabel {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    z-index: 1000;
+    font-family: "Shadows Into Light Two", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #clockContainer, #dateContainer{
     display: flex;
     justify-content: center;
-    font-size: 25px;
+    font-size: 100px;
+    backdrop-filter: blur(0.8px);
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
+/* Pool järgnevast button CSSist on pärit leheküljelt:
+https://getcssscan.com/css-buttons-examples
+Kasutatud on Button 74, mida on kohandatud*/
 button{
     font-size: 1.1em;
     border-radius: 20px;
     padding: 0px;
     height: 40px;
     width: 40px;
+    min-width: 40px;
+    border: 2px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    touch-action: manipulation;
+    font-family: "Shadows Into Light Two", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Värvivalik */
+#colorContainer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+#colorButtonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.color {
+    font-size: 0.9em;
+    border-radius: 10px;
+    padding: 3px 12px;
+    height: auto;
+    width: auto;
+    border: 2px solid white;
+    cursor: pointer;
+    background-color: rgba(233, 130, 130, 0.1);
+    color: white;
+    transition: 0.2s;
+}
+.color:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+#color {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    height: 40px;
+    width: 120px;
+    font-size: 20px;
+    padding: 2px;
+}
+
+
+/*Pildivalik*/
+#imageContainer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+#imageButtonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.image {
+    font-size: 0.9em;
+    border-radius: 10px;
+    padding: 3px 12px;
+    height: auto;
+    width: auto;
+    border: 2px solid white;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: 0.2s;
+}
+
+.image:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+#image {
+    position: fixed;
+    bottom: 10px;
+    left: 160px;
+    height: 40px;
+    width: 120px;
+    font-size: 20px;
+    padding: 2px;
+}
+/*githubi nupp*/
+#github {
+    position: fixed;
+    bottom: 10px;
+    right: 200px;
+    height: 40px;
+    width: 120px;
+    font-size: 20px;
+    padding: 2px;
+}
+/*24h-12h nupp*/
+#timeFormat {
+    position: fixed;
+    bottom: 10px;
+    left: 300px;
+    height: 40px;
+    width: 120px;
+    font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+#secondDisplay {
+    position: fixed;
+    bottom: 10px;
+    left: 440px;
+    height: 40px;
+    min-width: 160px;
+    font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
+}
+/* Muudetud asukohta veidi, et ei jääks tähtedele ette */
+#bigger, 
+#smaller {
+    margin-top: 30px;
+}
+
+/*Nädalapäeva CSS*/
+#weekDay {
+    font-size: 50px;
+
+}
+/* Kuupäeva formaat*/
+#dateFormat {
+    position: fixed;
+    bottom: 10px;
+    left: 620px; 
+    height: 40px;
+    min-width: 140px;
+    font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+#color,
+#image,
+#github,
+#timeFormat,
+#secondDisplay,
+#dateFormat {
+    cursor: pointer;
 }
