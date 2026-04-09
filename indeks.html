@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="clock.js" defer=""></script>
+    <script src="elemendid.js" defer=""></script>
+    <link rel="stylesheet" href="clock.css">
+    <title>Kell</title>
+<script type="text/javascript" data-name="TokenSigning" data-by="Web-eID extension" src="chrome-extension://gnmckgbandlkacikdndelhfghdejfido/token-signing-page-script.js"></script></head>
+</head>
+<body>
+    <div id="left">
+        <div id="name">Veebilehe autor: Oliver Kallassalu</div>
+        <div id="settings">
+            <label for="bgSelect">Vali taust:</label>
+            <select id="bgSelect">
+                <option value="blue">Sinine</option>
+                <option value="black">Süsimust</option>
+                <option value="serious">Tõsine</option>
+            </select>
+        </div>
+        <div id="textSettings">
+            <label for="fontSelect">Valige sobiv font: </label>
+            <select id="fontSelect">
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="'Courier New', monospace">Courier (Masinakiri)</option>
+                <option value="'Times New Roman', serif">Times New Roman</option>
+                <option value="Impact, Charcoal, sans-serif">Impact (Tugev)</option>
+            </select>
+
+            <br><br>
+
+            <label for="colourPicker">Valige sobiv värv: </label>
+            <input type="color" id="colourPicker" value="#f0f8ff">
+        </div>
+        <div id="timeSettings">
+            <input type="checkbox" id="timeTick">
+            <label for="timeTick">Kasuta AM/PM formaati</label>
+        </div>
+    </div>
+    <div id="container">
+        <div id="lobsterContainer">
+            <div id="imageDisplay"></div>
+            <button id="lobsterButton">Jõevähk</button>
+            <div id="gifContainerLeft"></div>
+            <div id="gifContainerRight"></div>
+        </div>
+        <div id="clock">  
+            <div id="clockContainer">
+                <div id="hours">00:</div>
+                <div id="minutes">00:</div>
+                <div id="seconds">00</div>
+            </div>
+            <div id="dateContainer">
+                <div id="day">01.</div>
+                <div id="month">01.</div>
+                <div id="year">2000</div>
+            </div>
+        </div>  
+		<div id="buttonContainer">
+			<button id="bigger">+</button>
+			<button id="smaller">-</button>
+		</div>
+    </div>
+</body>
+</html>
