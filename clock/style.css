@@ -1,0 +1,151 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+    135deg,
+    #ffd6e7,
+    #a0c4ff,
+    #caffbf
+    );
+    font-family:"Quicksand";
+    overflow:hidden; 
+}
+
+#clock{
+    text-align:center;
+}
+
+
+#time{
+    font-size:10vw;
+    color:white;
+    text-shadow:
+    0 0 10px white,
+    0 0 20px pink;
+}
+
+
+#date{
+    font-size:2.5vw;
+    color:white;
+    opacity:0.9;
+}
+
+#controls{
+    position:fixed;
+    top:5%;
+}
+
+
+button{
+    margin:0.3em;
+    padding:0.6em 1em;
+    border:none;
+    border-radius:10px;
+    background:white;
+    cursor:pointer;
+    font-size:1.2em;
+}
+
+#settings {
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    display: flex;
+    gap: 0.5vw;
+    z-index: 100;
+}
+
+#settings select {
+    padding: 0.5vw 1vw;
+    border-radius: 1vw;
+    border: 20% ;
+    border-color: rgb(18, 8, 20);
+    font-size: 1.3vw;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 1.3vw;
+    padding: 0.5vw;
+}
+
+#settings select option {
+    font-size: 1.1vw; 
+}
+
+
+
+#surprise {
+  position: fixed;
+  bottom: 0%;
+  right: 0%; 
+  font-size: 1rem;
+  padding: 0%;
+  cursor: pointer;
+  background: transparent;
+}
+
+#lang {
+    position: fixed;
+    top: 20px;
+    left:20px; 
+}
+
+#strawhat{
+    position: fixed;
+    width: 70px;
+    height: auto;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 
+        transform 0.2s ease,
+        left 0.5s ease,
+        top 0.5s ease;
+}
+
+#strawhat:hover{
+    transform: scale(1.1);
+}
+
+#strawhat:hover{
+    transform: scale(1.1);
+}
+
+#luffyPopup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 2000;
+}
+
+#luffyPopup img{
+    width: 80%;
+    animation: laughMove 1.2s infinite alternate ease-in-out;
+}
+
+@keyframes laughMove{
+    0%{
+        transform: translateX(-40px);
+    }
+
+    100%{
+        transform: translateX(40px);
+    }
+}
+
+
+footer{
+    position:fixed;
+    bottom:2%;
+    font-size:1vw;
+    color:white;
+    opacity:0.8;
+}

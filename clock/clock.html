@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kell</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div id="clock">
+        <div id="time"></div>
+        <div id="date"></div>
+    </div>
+
+    <div id="controls">
+        <button id="plus">+</button>
+        <button id="minus">−</button>
+        <button id="lang"></button>
+    </div>
+
+<div id="settings">
+    <label for="fontSelect" style="font-size:1.5vw; color:white; display:block; margin-bottom:0.5vw;">Font</label>
+    <select id="fontSelect">
+        <option value="'Quicksand', sans-serif" style="font-family: 'Quicksand', sans-serif;">Quicksand</option>
+        <option value="'Roboto', sans-serif" style="font-family: 'Roboto', sans-serif;">Roboto</option>
+        <option value="'Courier New', monospace" style="font-family: 'Courier New', monospace;">Courier New</option>
+        <option value="'Pacifico', cursive" style="font-family: 'Pacifico', cursive;">Pacifico</option>
+    </select>
+    <label for="colorSelect" style="font-size:1.5vw; color:white; display:block; margin-top:1vw; margin-bottom:0.5vw;">Color</label>
+    <select id="colorSelect">
+        <option value="white" style="background-color:white; color:black;">White</option>
+        <option value="pink" style="background-color:rgb(253, 175, 230); color:black;">Pink</option>
+        <option value="yellow" style="background-color:rgb(236, 236, 123); color:black;">Yellow</option>
+        <option value="blue" style="background-color:rgb(132, 238, 254); color:black;">Blue</option>
+        <option value="green" style="background-color:lime; color:black;">Green</option>
+    </select>
+</div>
+
+    <img 
+        id="strawhat"
+        src="images/strawhat.png"
+        alt="Strawhat"
+    >
+
+    <div id="luffyPopup">
+        <img 
+            src="images/luffylaugh.png"
+            alt="Luffy laughing"
+        >
+    </div>
+
+    <audio 
+        id="laughAudio"
+        src="audio/laugh.mp3">
+    </audio>
+
+
+    <button id="surprise">🎁</button>
+
+    <div id="videoContainer"></div>
+
+    <footer>
+        Lileen Irv |
+        <a href="https://github.com/Lileen-I/kodutoo-1" target="_blank">
+            repo
+        </a>
+    </footer>
+
+</body>
+
+</html>
